@@ -2,24 +2,25 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     extends: [
         'plugin:react/recommended',
         'airbnb',
     ],
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: [
-                '.eslintrc.{js,cjs}',
-            ],
-            parserOptions: {
-                sourceType: 'script',
-            },
-        },
-    ],
+    // overrides: [
+    //     {
+    //         env: {
+    //             node: true,
+    //         },
+    //         files: [
+    //             '.eslintrc.{js,cjs}',
+    //         ],
+    //         parserOptions: {
+    //             sourceType: 'script',
+    //         },
+    //     },
+    // ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
@@ -42,6 +43,8 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'no-unused-vars': 'warn',
         'no-shadow': 'off',
+        'react/jsx-props-no-spreading': 'warn',
+        'react/function-component-definition': 'off',
     },
     globals: {
         __IS_DEV__: true,
